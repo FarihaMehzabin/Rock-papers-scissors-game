@@ -1,54 +1,117 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
 
-body{
-    color: white;
+body {
+  color: white;
 }
 
+svg{
+    display: block;
+}
 
 /*  */
-main{
-    background: radial-gradient(hsl(214, 47%, 23%),hsl(237, 49%, 15%) );
-    padding: 100px;
-    height: 100vh;
+main {
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  padding: 2rem;
+  height: 100vh;
 }
 
-header{
-    border: 5px solid gray;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 20px;
+header {
+  border: 5px solid gray;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  width: min(100%, 1000px);
+  margin: 0 auto;
 }
 
-.header-title{
-    width: 20%;
-    font-weight: 700;
-    font-size: 1.3rem;
-    align-self: center;
+.header-title {
+  width: min(20%, 100px);
+  font-weight: 700;
+  font-size: clamp(10px, 2rem, 4rem);
+  padding: 1rem;
+  align-self: center;
 }
 
-.score-card{
-    background-color: white;
-    color: black;
-    padding: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    align-self: stretch;
+.score-card {
+  background-color: white;
+  color: black;
+  padding: 10px 25px;
+  align-self: center;
 }
 
-#score-title{
-    color: blue;
-    padding: 0;
-    letter-spacing: .2rem;
-    font-weight: 800;
+#score-title {
+  color: blue;
+  padding: 0;
+  letter-spacing: 0.2rem;
+  font-weight: 800;
 }
 
-#current-score{
-    font-size: 4rem;
+#current-score {
+  font-size: 5rem;
+  text-align: center;
+  font-weight: 900;
+  color: rgb(50, 50, 50);
+}
+
+.game {
+  width: min(100%, 1000px);
+  margin: 0 auto;
+}
+
+.start-game {
+  padding: 20rem 0;
+  background: url("/images/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 10rem;
+  position: relative;
+}
+
+.rock,.paper,.scissors {
+  background: radial-gradient(white, rgb(175, 162, 162));
+  padding: 4rem;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  border: 16px solid red;
+  position: absolute;
+  left: 28%;
+  top: 15%;
+}
+
+.rock svg,.paper svg, .scissors svg{
+   position: relative;
+   top: -30px;
+   left: -20px;
+}
+
+.paper {
+    left: 55%;
+    border: 16px solid rgb(241, 207, 16);
+  /* background: url("/images/icon-paper.svg"); */
+}
+
+.scissors {
+  /* background: url("/images/icon-scissors.svg"); */
+  border: 16px solid rgb(36, 110, 238);
+  top: 50%;
+  left: 42%;
+}
+
+.rules{
+    color: white;
+    font-weight: 600;
+    border: 2px solid gray;
+    width: 10%;
+    margin: 0 auto;
     text-align: center;
-    font-weight: 900;
-    color: rgb(50, 50, 50);
+    padding: 1rem 2rem;
+}
+
+.hidden {
+  display: none;
 }
