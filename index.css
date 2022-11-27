@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    color: white;
+}
+
+
+/*  */
+main{
+    background: radial-gradient(hsl(214, 47%, 23%),hsl(237, 49%, 15%) );
+    padding: 100px;
+    height: 100vh;
+}
+
+header{
+    border: 5px solid gray;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+
+.header-title{
+    width: 20%;
+    font-weight: 700;
+    font-size: 1.3rem;
+    align-self: center;
+}
+
+.score-card{
+    background-color: white;
+    color: black;
+    padding: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    align-self: stretch;
+}
+
+#score-title{
+    color: blue;
+    padding: 0;
+    letter-spacing: .2rem;
+    font-weight: 800;
+}
+
+#current-score{
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 900;
+    color: rgb(50, 50, 50);
+}
