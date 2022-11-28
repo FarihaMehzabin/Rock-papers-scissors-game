@@ -15,7 +15,7 @@ svg{
 main {
   background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   padding: 2rem;
-  height: 100vh;
+  padding-bottom: 15rem;
 }
 
 header {
@@ -24,7 +24,7 @@ header {
   display: flex;
   justify-content: space-between;
   border-radius: 20px;
-  width: min(100%, 1000px);
+  width: min(100%, 900px);
   margin: 0 auto;
 }
 
@@ -57,8 +57,8 @@ header {
   color: rgb(50, 50, 50);
 }
 
-.game {
-  width: min(100%, 1000px);
+.game,.game-ongoing {
+  width: min(100%, 900px);
   margin: 0 auto;
 }
 
@@ -71,6 +71,13 @@ header {
   position: relative;
 }
 
+.game-ongoing{
+    padding: 10rem 0;
+    padding-top: 10rem;
+    display: flex;
+    justify-content: space-between;
+}
+
 .rock,.paper,.scissors {
   background: radial-gradient(white, rgb(175, 162, 162));
   padding: 4rem;
@@ -81,37 +88,93 @@ header {
   position: absolute;
   left: 28%;
   top: 15%;
+  box-shadow: 1px 5px rgba(255, 0, 0, 0.773);
 }
 
 .rock svg,.paper svg, .scissors svg{
    position: relative;
    top: -30px;
    left: -20px;
+   
 }
 
 .paper {
     left: 55%;
     border: 16px solid rgb(241, 207, 16);
-  /* background: url("/images/icon-paper.svg"); */
+    box-shadow: 1px 5px rgba(241, 207, 16, 0.845);
 }
 
 .scissors {
   /* background: url("/images/icon-scissors.svg"); */
   border: 16px solid rgb(36, 110, 238);
   top: 50%;
-  left: 42%;
+  left: 42%;    
+  box-shadow: 1px 5px rgba(36, 110, 238, 0.79);
 }
 
-.rules{
+footer{
     color: white;
     font-weight: 600;
     border: 2px solid gray;
-    width: 10%;
+    width: min(40%, 200px);
     margin: 0 auto;
     text-align: center;
     padding: 1rem 2rem;
 }
 
+.position{
+    position: static;
+}
+
+.house-picked{
+    animation: ani 1s linear forwards;
+}
+
+.I-picked, .house-picked{
+    /* display: flex; */
+    text-align: center;
+}
+
+.I-picked>h3, .house-picked>h3{
+    margin-top: 2rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.verdict{
+    text-align: center;
+}
+
+.verdict_text{
+    font-size: 5rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.play-again{
+    margin: 2rem auto;
+    background-color: white;
+    width: 30%;
+    padding: 1rem 3rem;
+    color: blue;
+    letter-spacing: .3rem;
+    border-radius: 10px;
+}
+
 .hidden {
   display: none;
+}
+
+@keyframes ani{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: .5;
+  }
+
+  100%{
+    opacity: 1;
+    transform: scale(1.2);
+  }
 }
