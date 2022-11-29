@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -15,7 +16,7 @@ svg{
 main {
   background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   padding: 2rem;
-  padding-bottom: 15rem;
+  padding-bottom: 20rem;
 }
 
 header {
@@ -32,14 +33,14 @@ header {
   width: min(20%, 100px);
   font-weight: 700;
   font-size: clamp(10px, 2rem, 4rem);
-  padding: 1rem;
+  padding: ;
   align-self: center;
 }
 
 .score-card {
   background-color: white;
   color: black;
-  padding: 10px 25px;
+  padding: 1em 2em;
   align-self: center;
 }
 
@@ -69,13 +70,14 @@ header {
   background-position: center;
   padding-top: 10rem;
   position: relative;
+  animation: scaling 1s linear forwards;
 }
 
 .game-ongoing{
     padding: 10rem 0;
     padding-top: 10rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .rock,.paper,.scissors {
@@ -149,6 +151,7 @@ footer{
     font-size: 5rem;
     text-transform: uppercase;
     margin-bottom: 2rem;
+    animation: blink .5s ease-out infinite;
 }
 
 .play-again{
@@ -160,6 +163,8 @@ footer{
     letter-spacing: .3rem;
     border-radius: 10px;
 }
+
+
 
 .hidden {
   display: none;
@@ -177,4 +182,113 @@ footer{
     opacity: 1;
     transform: scale(1.2);
   }
+}
+
+@keyframes blink{
+  0%{
+    color: rgb(251, 251, 251);
+  }
+  50%{
+    /* opacity: .5; */
+  }
+
+  100%{
+    color: rgb(255, 0, 8);
+  }
+}
+
+@keyframes scaling{
+    0%{
+        transform: scale(.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+@media screen and (max-width: 500px){
+
+.header-title {
+  font-weight: 700;
+  font-size: 1rem;
+  align-self: center;
+}
+
+.score-card {
+  background-color: white;
+  color: black;
+  padding: .5em;
+  align-self: center;
+}
+
+#current-score {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 900;
+  color: rgb(50, 50, 50);
+}
+
+
+
+  .rock,.paper,.scissors {
+  background: radial-gradient(white, rgb(175, 162, 162));
+  padding: 2.5rem;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border: 16px solid red;
+  position: absolute;
+  left: 0;
+  top: 15%;
+  box-shadow: 1px 3px rgba(255, 0, 0, 0.773);
+}
+
+.paper {
+    left: 65%;
+    border: 16px solid rgb(241, 207, 16);
+    box-shadow: 1px 5px rgba(241, 207, 16, 0.845);
+}
+
+.scissors {
+  /* background: url("/images/icon-scissors.svg"); */
+  border: 16px solid rgb(36, 110, 238);
+  top: 60%;
+  left: 30%;    
+  box-shadow: 1px 5px rgba(36, 110, 238, 0.79);
+}
+
+.game-ongoing{
+    justify-content: space-between;
+    padding-bottom: 4rem;
+    
+}
+
+.position{
+    position: static;
+}
+
+.house-picked{
+    animation: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.verdict_text{
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    animation: blink .5s ease-out infinite;
+}
+
+.play-again{
+    width: 60%;
+    padding: 1rem 2rem;
+    color: blue;
+    letter-spacing: .1rem;
+    border-radius: 10px;
+}
+
 }

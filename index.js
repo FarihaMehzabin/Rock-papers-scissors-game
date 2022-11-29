@@ -2,8 +2,11 @@ const gameStart = document.getElementById("start-game");
 let gameOngoing = document.getElementById("game-ongoing");
 let verdict = document.getElementById("verdict");
 let verdictText = document.getElementById("verdict_text");
+let playAgain = document.getElementById("play-again");
+let curScore = document.getElementById("current-score");
 let player = "";
 let house = "";
+let playerScore = 0;
 
 function getPlayerCode(target) {
   if (target === "rock" || target === "rock-svg") {
@@ -106,20 +109,30 @@ function getVerdict() {
   }
   //House win conditions
   else if (house === "scissors" && player === "paper") {
+    if(playerScore!= 0) playerScore --;
     return "House Wins";
   } else if (house === "paper" && player === "rock") {
+    if (playerScore != 0) playerScore--;
     return "House Wins";
   } else if (house === "rock" && player === "scissors") {
+    if (playerScore != 0) playerScore--;
     return "House Wins";
   }
   //Player win conditions
   else if (player === "scissors" && house === "paper") {
+    playerScore++;
     return "You Win";
   } else if (player === "paper" && house === "rock") {
+    playerScore++;
     return "You Win";
   } else if (player === "rock" && house === "scissors") {
+    playerScore++;
     return "You Win";
   }
+
+  curScore.textContent = playerScore;
+  
+  
 }
 
 gameStart.addEventListener("click", function (e) {
@@ -130,5 +143,12 @@ gameStart.addEventListener("click", function (e) {
     gameOngoing.innerHTML += getHouseCode();
     verdict.classList.remove("hidden");
     verdictText.textContent = getVerdict();
+    curScore.textContent = playerScore;
   }
 });
+
+playAgain.addEventListener("click", function (e) {
+    gameStart.classList.remove("hidden");
+    gameOngoing.classList.add("hidden");
+    verdict.classList.add("hidden");
+})
