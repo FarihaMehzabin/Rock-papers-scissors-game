@@ -4,9 +4,18 @@ let verdict = document.getElementById("verdict");
 let verdictText = document.getElementById("verdict_text");
 let playAgain = document.getElementById("play-again");
 let curScore = document.getElementById("current-score");
+let rules = document.getElementById("rules");
+let rulesModal = document.getElementById("rules-modal");
+let closeModal = document.getElementById("close-modal");
 let player = "";
 let house = "";
 let playerScore = 0;
+
+
+
+rulesModal.style.display = "none";
+
+
 
 function getPlayerCode(target) {
   if (target === "rock" || target === "rock-svg") {
@@ -137,6 +146,7 @@ function getVerdict() {
 
 gameStart.addEventListener("click", function (e) {
   if (e.target.id) {
+    
     gameStart.classList.add("hidden");
     gameOngoing.classList.remove("hidden");
     gameOngoing.innerHTML = getPlayerCode(e.target.id);
@@ -151,4 +161,14 @@ playAgain.addEventListener("click", function (e) {
     gameStart.classList.remove("hidden");
     gameOngoing.classList.add("hidden");
     verdict.classList.add("hidden");
+})
+
+rules.addEventListener("click", function (e) {
+    rulesModal.style.display = "flex";
+    rules.classList.add("hidden");
+})
+
+closeModal.addEventListener("click", function (e) {
+    rulesModal.style.display = "none";
+    rules.classList.remove("hidden");
 })

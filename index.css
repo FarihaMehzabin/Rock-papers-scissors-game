@@ -16,7 +16,7 @@ svg{
 main {
   background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   padding: 2rem;
-  padding-bottom: 20rem;
+  padding-bottom: 25rem;
 }
 
 header {
@@ -117,11 +117,9 @@ header {
 footer{
     color: white;
     font-weight: 600;
-    border: 2px solid gray;
     width: min(40%, 200px);
     margin: 0 auto;
     text-align: center;
-    padding: 1rem 2rem;
 }
 
 .position{
@@ -206,6 +204,46 @@ footer{
     }
 }
 
+.rules{
+     border: 2px solid gray;
+     padding: 1rem 2rem;
+}
+
+.rules-modal{
+    /* background: url('/images/image-rules.svg'); */
+    /* width: 300px; */
+    /* height: 300px; */
+    background-color: rgba(32, 35, 35, 0.801);
+    position: fixed;
+    top: 0; 
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 20rem;
+    width: 21rem;
+    box-shadow: 1px 0 30px rgb(69, 65, 65);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.rules-modal>h3{
+    letter-spacing: .2rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(10, 11, 13);
+    padding: .3rem;
+    align-self: flex-start;
+    padding: .5rem;
+}
+
+.rules-modal>h3:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(10, 11, 13);
+   
+}
 
 @media screen and (max-width: 500px){
 
