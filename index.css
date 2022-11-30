@@ -5,7 +5,7 @@
 }
 
 body {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 svg{
@@ -14,7 +14,7 @@ svg{
 
 /*  */
 main {
-  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  background: radial-gradient(hsl(245, 66%, 25%), hsl(220, 95%, 23%));
   padding: 2rem;
   padding-bottom: 25rem;
 }
@@ -33,7 +33,6 @@ header {
   width: min(20%, 100px);
   font-weight: 700;
   font-size: clamp(10px, 2rem, 4rem);
-  padding: ;
   align-self: center;
 }
 
@@ -115,7 +114,7 @@ header {
 }
 
 footer{
-    color: white;
+    color: rgb(254, 254, 254);
     font-weight: 600;
     width: min(40%, 200px);
     margin: 0 auto;
@@ -149,7 +148,7 @@ footer{
     font-size: 5rem;
     text-transform: uppercase;
     margin-bottom: 2rem;
-    animation: blink .5s ease-out infinite;
+    animation: blink 20s ease-out infinite;
 }
 
 .play-again{
@@ -184,14 +183,16 @@ footer{
 
 @keyframes blink{
   0%{
-    color: rgb(251, 251, 251);
+    color: rgb(48, 246, 88);
   }
   50%{
     /* opacity: .5; */
   }
 
   100%{
-    color: rgb(255, 0, 8);
+    color: rgb(0, 143, 10);
+    transform: translateY(3px);
+    text-shadow: 1px 1px 5px rgb(25, 172, 32);
   }
 }
 
@@ -315,7 +316,7 @@ footer{
 }
 
 .verdict_text{
-    font-size: 3rem;
+    font-size: 2rem;
     text-transform: uppercase;
     margin-bottom: 2rem;
     animation: blink .5s ease-out infinite;

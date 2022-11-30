@@ -145,8 +145,8 @@ function getVerdict() {
 }
 
 gameStart.addEventListener("click", function (e) {
-  if (e.target.id) {
-    
+  if (e.target.id!=undefined && e.target.id!= "start-game") {
+    console.log(e.target.id);
     gameStart.classList.add("hidden");
     gameOngoing.classList.remove("hidden");
     gameOngoing.innerHTML = getPlayerCode(e.target.id);
