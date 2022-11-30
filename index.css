@@ -148,7 +148,7 @@ footer{
     font-size: 5rem;
     text-transform: uppercase;
     margin-bottom: 2rem;
-    animation: blink 20s ease-out infinite;
+    animation: blink 1s ease-out infinite;
 }
 
 .play-again{
@@ -247,6 +247,12 @@ footer{
 }
 
 @media screen and (max-width: 500px){
+
+
+main{
+   padding-bottom: 5rem;
+}
+
 
 .header-title {
   font-weight: 700;
