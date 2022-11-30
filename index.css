@@ -116,7 +116,7 @@ header {
 footer{
     color: rgb(254, 254, 254);
     font-weight: 600;
-    width: min(40%, 200px);
+    width: min(60%, 200px);
     margin: 0 auto;
     text-align: center;
 }
@@ -228,7 +228,7 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-left: 1rem;
+    padding-left: .5rem;
 }
 
 .rules-modal>h3{
