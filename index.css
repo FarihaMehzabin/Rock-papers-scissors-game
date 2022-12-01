@@ -6,6 +6,7 @@
 
 body {
   color: rgb(255, 255, 255);
+  
 }
 
 svg{
@@ -16,7 +17,8 @@ svg{
 main {
   background: radial-gradient(hsl(245, 66%, 25%), hsl(220, 95%, 23%));
   padding: 2rem;
-  padding-bottom: 25rem;
+  min-height: 100vh;
+  /* padding-bottom: 25rem; */
 }
 
 header {
@@ -77,6 +79,7 @@ header {
     padding-top: 10rem;
     display: flex;
     justify-content: space-around;
+    padding-bottom: 5rem;
 }
 
 .rock,.paper,.scissors {
@@ -158,10 +161,62 @@ footer{
     padding: 1rem 3rem;
     color: blue;
     letter-spacing: .3rem;
+    font-weight: bold;
     border-radius: 10px;
+    transition: all .5s linear;
+    box-shadow: 1px 4px 5px rgb(87, 106, 248);
 }
 
+.play-again:hover{
+    cursor: pointer;
+    transform: translateY(3px);
+    box-shadow: 1px 4px 5px rgba(87, 106, 248, 0.236);
+}
 
+.rules{
+     border: 2px solid gray;
+     padding: 1rem 2rem;
+}
+
+.rules:hover{
+    background-color: rgb(47, 154, 221);
+}
+
+.rules-modal{
+    /* background: url('/images/image-rules.svg'); */
+    /* width: 300px; */
+    /* height: 300px; */
+    background-color: rgba(32, 35, 35, 0.801);
+    position: fixed;
+    top: 0; 
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 20rem;
+    width: 21rem;
+    box-shadow: 1px 0 30px rgb(69, 65, 65);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: .5rem;
+}
+
+.rules-modal>h3{
+    letter-spacing: .2rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(10, 11, 13);
+    padding: .3rem;
+    align-self: flex-start;
+    padding: .5rem;
+}
+
+.rules-modal>h3:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(10, 11, 13);
+   
+}
 
 .hidden {
   display: none;
@@ -205,46 +260,7 @@ footer{
     }
 }
 
-.rules{
-     border: 2px solid gray;
-     padding: 1rem 2rem;
-}
 
-.rules-modal{
-    /* background: url('/images/image-rules.svg'); */
-    /* width: 300px; */
-    /* height: 300px; */
-    background-color: rgba(32, 35, 35, 0.801);
-    position: fixed;
-    top: 0; 
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    height: 20rem;
-    width: 21rem;
-    box-shadow: 1px 0 30px rgb(69, 65, 65);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: .5rem;
-}
-
-.rules-modal>h3{
-    letter-spacing: .2rem;
-    color: rgb(255, 255, 255);
-    background-color: rgb(10, 11, 13);
-    padding: .3rem;
-    align-self: flex-start;
-    padding: .5rem;
-}
-
-.rules-modal>h3:hover{
-    background-color: rgb(255, 255, 255);
-    color: rgb(10, 11, 13);
-   
-}
 
 @media screen and (max-width: 500px){
 
