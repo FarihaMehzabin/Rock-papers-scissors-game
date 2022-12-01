@@ -145,7 +145,7 @@ function getVerdict() {
 }
 
 gameStart.addEventListener("click", function (e) {
-  if (e.target.id!=undefined && e.target.id!= "start-game") {
+  if (e.target.id!=undefined && e.target.id!= "start-game" && e.target.id!="") {
     console.log(e.target.id);
     gameStart.classList.add("hidden");
     gameOngoing.classList.remove("hidden");
